@@ -1,3 +1,26 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
+sign_up:
+    path: /sign_up
+    defaults: { _controller: AppBundle:Security:signUp }
+
+login:
+    path: /login
+    defaults: { _controller: AppBundle:Security:login }
+
+logout:
+    path: /logout
+
+google:
+    path: /auth/google
+    defaults: { _controller: AppBundle:Security:googleLogin }
+
+redirect_google:
+    path: /google
+    defaults: { _controller: AppBundle:Security:redirectGoogleLogin }
+
+google_sign_up:
+    path: /google_sign_up
+    defaults: { _controller: AppBundle:Security:googleSignUp }
